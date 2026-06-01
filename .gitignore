@@ -1,0 +1,6 @@
+doc/
+/data/app.sqlite
+/config/config.php
+/public/uploads/*
+!/public/uploads/.gitkeep
+.DS_Store

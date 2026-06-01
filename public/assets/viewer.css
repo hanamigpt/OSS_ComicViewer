@@ -1,0 +1,244 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f8;
+  --panel: #ffffff;
+  --text: #20242a;
+  --muted: #68707a;
+  --line: #d9dde3;
+  --accent: #0f766e;
+  --accent-strong: #134e4a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.admin-link {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+main {
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 28px 0 48px;
+}
+
+.hero,
+.series-detail,
+.episode-list {
+  margin: 0 0 28px;
+}
+
+.hero h1,
+.series-detail h1,
+.reader-title h1 {
+  margin: 0 0 8px;
+  line-height: 1.15;
+}
+
+.hero p,
+.series-detail p,
+.reader-title p,
+.empty-state {
+  color: var(--muted);
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.series-card {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 16px;
+  min-height: 120px;
+  padding: 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.series-card img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #eef1f4;
+}
+
+.series-card h2,
+.episode-list h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.series-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.episode-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.episode-row span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.reader-shell {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.reader-nav,
+.episode-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 20px;
+}
+
+.reader-title {
+  padding: 0 0 24px;
+}
+
+.reader-title p {
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.comic-column {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  background: #ffffff;
+}
+
+.comic-block {
+  opacity: 1;
+}
+
+.comic-block[data-animate="true"] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 260ms ease, transform 260ms ease;
+}
+
+.comic-block.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.comic-image {
+  margin: 0;
+}
+
+.comic-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.comic-spacer {
+  width: 100%;
+}
+
+.comic-text {
+  padding: 28px 24px;
+  white-space: pre-wrap;
+}
+
+.text-small {
+  font-size: 14px;
+}
+
+.text-normal {
+  font-size: 18px;
+}
+
+.text-large {
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.episode-pager {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 14px 16px;
+  }
+
+  main {
+    width: min(100% - 20px, 1080px);
+    padding-top: 20px;
+  }
+
+  .series-card {
+    grid-template-columns: 1fr;
+  }
+
+  .episode-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .comic-block[data-animate="true"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
