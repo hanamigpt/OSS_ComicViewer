@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../../src/bootstrap.php';
+require_once __DIR__ . '/../_bootstrap.php';
 
 $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 $series = $id ? find_series_by_id($id) : null;
