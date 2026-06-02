@@ -2,7 +2,9 @@
 
 A lightweight open-source PHP + SQLite CMS and reader for creator-owned vertical-scroll comics.
 
-Screenshot: not included yet. Run the app locally, create a series and episode, then upload your own panel images.
+## Screenshot
+
+![Vertical scroll reader screenshot](docs/screenshots/reader.png)
 
 ## Requirements
 

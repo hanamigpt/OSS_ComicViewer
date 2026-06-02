@@ -16,3 +16,10 @@
 - Verified public home, admin login page, successful admin login, and authenticated admin home over HTTP.
 - Found Homebrew PHP defaults `upload_max_filesize=2M` and `post_max_size=8M`.
 - Added visible upload limit messaging and clearer handling for PHP upload size failures.
+- Added OSS-facing documentation polish:
+  - `CHANGELOG.md`
+  - `CONTRIBUTING.md`
+  - `SECURITY.md`
+  - `docs/manual-test-ja.md`
+- Added README screenshot section with `docs/screenshots/reader.png`.
+- Kept runtime behavior unchanged.
