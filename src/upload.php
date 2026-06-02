@@ -66,7 +66,7 @@ function save_uploaded_image(array $file): array
 
     $storedExtension = $extension === 'jpeg' ? 'jpg' : $extension;
     $storedName = bin2hex(random_bytes(16)) . '.' . $storedExtension;
-    $uploadDir = BASE_PATH . '/public/uploads';
+    $uploadDir = (string) app_config('upload_dir', BASE_PATH . '/public/uploads');
     if (!is_dir($uploadDir)) {
         mkdir($uploadDir, 0775, true);
     }
@@ -76,10 +76,12 @@ function save_uploaded_image(array $file): array
         throw new RuntimeException('Could not save uploaded file.');
     }
 
+    $uploadUrlPath = trim((string) app_config('upload_url_path', 'uploads'), '/');
+
     return [
         'original_name' => $originalName,
         'stored_name' => $storedName,
-        'relative_path' => 'uploads/' . $storedName,
+        'relative_path' => $uploadUrlPath . '/' . $storedName,
         'mime_type' => $mimeType,
         'file_size' => (int) $file['size'],
         'width' => (int) ($imageInfo[0] ?? 0),

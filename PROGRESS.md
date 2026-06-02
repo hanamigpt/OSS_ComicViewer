@@ -23,3 +23,10 @@
   - `docs/manual-test-ja.md`
 - Added README screenshot section with `docs/screenshots/reader.png`.
 - Kept runtime behavior unchanged.
+- Added Xserver deployment preparation:
+  - `DEPLOY_XSERVER.md`
+  - public bootstrap resolver for `public_html` deployments
+  - configurable upload filesystem path and URL path
+  - production-aware secure session cookie option
+  - `.htaccess` guards for public, admin, and uploads directories
+- Manual confirmation on Xserver is still required for Apache directive compatibility, WAF behavior, SQLite extensions, upload limits, and file permissions.

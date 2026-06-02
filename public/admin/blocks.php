@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../../src/bootstrap.php';
+require_once __DIR__ . '/../_bootstrap.php';
 
 $episodeId = (int) ($_GET['episode_id'] ?? 0);
 $episode = find_episode_by_id($episodeId);

@@ -4,6 +4,8 @@ OSS_ComicViewer is currently an MVP intended for local development and small sel
 
 Do not expose the admin area to the public internet without reviewing deployment security.
 
+For Xserver deployment notes, see [DEPLOY_XSERVER.md](DEPLOY_XSERVER.md).
+
 ## Before Public Deployment
 
 Please review at least:

@@ -62,6 +62,8 @@ Draft series and draft episodes are hidden from public pages.
 
 This MVP is intended for local development and small self-hosted experiments. Review security settings before exposing the admin area publicly.
 
+For Xserver rental hosting, see [DEPLOY_XSERVER.md](DEPLOY_XSERVER.md).
+
 Current safeguards include:
 
 - Single-user password login with `password_hash()` / `password_verify()`.

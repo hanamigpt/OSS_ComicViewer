@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-require_once __DIR__ . '/../../src/bootstrap.php';
+require_once __DIR__ . '/../_bootstrap.php';
 
 $seriesId = (int) ($_GET['series_id'] ?? 0);
 $series = find_series_by_id($seriesId);
